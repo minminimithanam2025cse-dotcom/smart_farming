@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-900: #1a3a1a;
+  --color-forest-800: #1f4a1f;
+  --color-forest-700: #2d5a27;
+  --color-forest-600: #3a7a2e;
+  --color-forest-500: #4a9a38;
+  --color-forest-400: #5cb845;
+  --color-forest-300: #7dce66;
+  --color-forest-200: #a8e095;
+  --color-forest-100: #d4f0c8;
+  --color-forest-50: #eef8ea;
+  
+  --color-leaf-500: #56ab2f;
+  --color-leaf-400: #71c840;
+  --color-leaf-300: #91de62;
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f5f3ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #faf9f7;
+  color: #1a2e1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Tamil font support */
+.tamil-text {
+  font-family: 'Latha', 'Vijaya', 'Tamil MN', 'Noto Sans Tamil', sans-serif;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #4a9a38;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Demo mode badge */
+.demo-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800 border border-amber-200;
+}
+
+/* Loading skeleton */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.skeleton {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+  background-size: 200% 100%;
+}
+
+/* Card hover transitions */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Confidence bar */
+.confidence-bar {
+  transition: width 0.6s ease;
+}
